@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 // Carrega as variáveis do .env para process.env
 dotenv.config();
 const app = express();
-const porta = "8081";
+const porta = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hello World!<br> Gb Aqui!</h1>');
+    res.send('<h1>Hello World!<br>Testando Aqui!</h1>');
 })
 
 app.listen(porta, () => {
